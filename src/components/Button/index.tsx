@@ -15,7 +15,7 @@ const Wrapper = styled.input`
   padding: 0.8rem;
   cursor: pointer;
   font-size: 12pt;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   font-weight: 700;
   color: ${WHITE_COLOR};
   background: ${PRIMARY_COLOR};
