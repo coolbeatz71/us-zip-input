@@ -15,6 +15,12 @@ const GlobalStyle = createGlobalStyle`
     border: 1px solid ${GREY_COLOR};
     border-radius: ${BORDER_RADIUS};
   }
+
+  .loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2rem;
+  }
 `;
 
 export default GlobalStyle;
