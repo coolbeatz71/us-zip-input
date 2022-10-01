@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import styled from "styled-components";
 import { BLACK_COLOR, BORDER_RADIUS, GREY_COLOR } from "../../constants/style";
 import { ITextInputProps } from "../../interfaces/ITextInputProps";
@@ -23,7 +24,7 @@ export const Wrapper = styled.input`
 const TextInput = (props: ITextInputProps): JSX.Element => {
   const { label, type, placeholder, name } = props as IUnknownObject;
   return (
-    <>
+    <Fragment>
       <InputLabel title={label} />
       <Wrapper
         type={type}
@@ -31,7 +32,7 @@ const TextInput = (props: ITextInputProps): JSX.Element => {
         placeholder={placeholder}
         {...(props as IUnknownObject)}
       />
-    </>
+    </Fragment>
   );
 };
 
