@@ -5,6 +5,7 @@ import { ERROR_COLOR } from "../../constants/style";
 
 const Wrapper = styled.div`
   font-size: 10pt;
+  margin-top: 0.5rem;
   color: ${ERROR_COLOR};
 `;
 

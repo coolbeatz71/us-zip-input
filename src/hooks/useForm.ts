@@ -6,13 +6,8 @@ const useForm = (callback: () => void) => {
   const [values, setValues] = useState<IUnknownObject>({});
   const [errors, setErrors] = useState<IUnknownObject>({});
 
-  const validate = (
-    event: ChangeEvent<HTMLInputElement>,
-    label: string,
-    name: string,
-    value: string,
-  ) => {
-    const pattern = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+  const validate = (label: string, name: string, value: string) => {
+    const pattern = /^[0-9]{3,5}$/;
     const regex = new RegExp(pattern);
 
     if (isEmpty(value)) setErrors({ [name]: `${label} is required` });
@@ -29,11 +24,8 @@ const useForm = (callback: () => void) => {
     label: string,
   ) => {
     event?.persist();
-
     const { name, value } = event.currentTarget;
-
-    validate(event, label, name, value);
-
+    validate(label, name, value);
     setValues({
       ...values,
       [name]: value,
